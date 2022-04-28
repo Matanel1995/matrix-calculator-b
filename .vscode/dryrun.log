@@ -3,7 +3,6 @@ make: Entering directory '/home/matanel/Desktop/CPP/matrix-calculator-b'
 clang++-9 -std=c++2a -Werror -Wsign-conversion -Isources --compile TestRunner.cpp -o TestRunner.o
 curl https://raw.githubusercontent.com/itzikbs1/Ex3_A_Cpp/master/Test.cpp > StudentTest1.cpp
 clang++-9 -std=c++2a -Werror -Wsign-conversion -Isources --compile StudentTest1.cpp -o StudentTest1.o
- 
 curl https://raw.githubusercontent.com/itamaralmog/matrix-calculator-a/main/Test.cpp > StudentTest2.cpp
 clang++-9 -std=c++2a -Werror -Wsign-conversion -Isources --compile StudentTest2.cpp -o StudentTest2.o
 curl https://raw.githubusercontent.com/amitmelamed/-matrix-calculator-a/main/Test.cpp > StudentTest3.cpp

@@ -6,7 +6,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Wed Apr 13 15:36:31 2022
+# Make data base, printed on Thu Apr 28 18:02:32 2022
 
 # Variables
 
@@ -47,11 +47,11 @@ CURDIR := /home/matanel/Desktop/CPP/matrix-calculator-b
 # makefile
 SHELL = /bin/sh
 # environment
-SNAP_DATA = /var/snap/code/93
+SNAP_DATA = /var/snap/code/94
 # environment
 VSCODE_NLS_CONFIG = {"locale":"en-gb","availableLanguages":{},"_languagePackSupport":true}
 # environment
-JOURNAL_STREAM = 8:30266
+JOURNAL_STREAM = 8:30925
 # environment
 XDG_CONFIG_DIRS = /etc/xdg/xdg-ubuntu:/etc/xdg
 # environment
@@ -77,15 +77,15 @@ DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/1000/bus
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-_ = /snap/code/93/usr/share/code/code
+_ = /snap/code/94/usr/share/code/code
 # environment
-MANAGERPID = 890
+MANAGERPID = 897
 # environment
 LESSOPEN = | /usr/bin/lesspipe %s
 # environment
 VSCODE_CWD = /home/matanel
 # environment
-GSETTINGS_SCHEMA_DIR = /snap/code/93/usr/share/glib-2.0/schemas
+GSETTINGS_SCHEMA_DIR = /snap/code/94/usr/share/glib-2.0/schemas
 # default
 MAKE_HOST := x86_64-pc-linux-gnu
 # environment
@@ -93,15 +93,15 @@ PATH = /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/
 # environment
 GPG_AGENT_INFO = /run/user/1000/gnupg/S.gpg-agent:0:1
 # environment
-SESSION_MANAGER = local/matanel-VirtualBox:@/tmp/.ICE-unix/1178,unix/matanel-VirtualBox:/tmp/.ICE-unix/1178
+SESSION_MANAGER = local/matanel-VirtualBox:@/tmp/.ICE-unix/1202,unix/matanel-VirtualBox:/tmp/.ICE-unix/1202
 # environment
 XDG_RUNTIME_DIR = /run/user/1000
 # environment
 GDK_PIXBUF_MODULE_FILE = /home/matanel/snap/code/common/.cache/gdk-pixbuf-loaders.cache
 # environment
-SNAP = /snap/code/93
+SNAP = /snap/code/94
 # environment
-SNAP_VERSION = 8dfae7a5
+SNAP_VERSION = dfd34e82
 # environment
 XDG_MENU_PREFIX = gnome-
 # environment
@@ -111,9 +111,9 @@ DISABLE_WAYLAND = 1
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # environment
-INVOCATION_ID = 336e62f7433c441bb30744ab471d055c
+INVOCATION_ID = 7430a57b5c084c14ae099ce40e3bdcbf
 # environment
-GDK_PIXBUF_MODULEDIR = /snap/code/93/usr/lib/x86_64-linux-gnu/gdk-pixbuf-2.0/2.10.0/loaders
+GDK_PIXBUF_MODULEDIR = /snap/code/94/usr/lib/x86_64-linux-gnu/gdk-pixbuf-2.0/2.10.0/loaders
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
 # environment
@@ -123,7 +123,7 @@ XDG_SESSION_DESKTOP = ubuntu
 # environment
 SSH_AUTH_SOCK = /run/user/1000/keyring/ssh
 # environment
-GIO_LAUNCHED_DESKTOP_FILE_PID = 14562
+GIO_LAUNCHED_DESKTOP_FILE_PID = 2090
 # automatic
 %F = $(notdir $%)
 # environment
@@ -139,7 +139,7 @@ PWD = /home/matanel/Desktop/CPP/matrix-calculator-b
 # default
 .LOADED := 
 # environment
-SSH_AGENT_PID = 1123
+SSH_AGENT_PID = 1130
 # environment
 ORIGINAL_XDG_CURRENT_DESKTOP = ubuntu:GNOME
 # environment
@@ -153,7 +153,7 @@ LESSCLOSE = /usr/bin/lesspipe %s %s
 # environment
 VSCODE_CLI = 1
 # environment
-VSCODE_CODE_CACHE_PATH = /home/matanel/.config/Code/CachedData/8dfae7a5cd50421d10cd99cb873990460525a898
+VSCODE_CODE_CACHE_PATH = /home/matanel/.config/Code/CachedData/dfd34e8260c270da74b5c2d86d61aee4b6d56977
 # environment
 LOGNAME = matanel
 # environment
@@ -187,19 +187,19 @@ MAKECMDGOALS := all
 # environment
 QT_IM_MODULE = ibus
 # environment
-SNAP_USER_DATA = /home/matanel/snap/code/93
+SNAP_USER_DATA = /home/matanel/snap/code/94
 # environment
 SHLVL = 0
 # environment
 GNOME_SHELL_SESSION_MODE = ubuntu
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-5a2fc436-e787-4a05-b3ce-ebd09209145c.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-67ffd02a-02b0-4a2d-80fe-9e0e21edaba7.sock
 # default
 MAKE_VERSION := 4.2.1
 # environment
 USER = matanel
 # environment
-SNAP_REVISION = 93
+SNAP_REVISION = 94
 # makefile
 .DEFAULT_GOAL := run
 # environment
@@ -215,7 +215,7 @@ MAKE_COMMAND := make
 # environment
 LANGUAGE = en_IL:en
 # environment
-VSCODE_IPC_HOOK = /run/user/1000/vscode-239e23a1-1.66.1-main.sock
+VSCODE_IPC_HOOK = /run/user/1000/vscode-239e23a1-1.66.2-main.sock
 # environment
 BAMF_DESKTOP_FILE_HINT = /var/lib/snapd/desktop/applications/code_code.desktop
 # makefile
@@ -269,7 +269,7 @@ OBJECTS = $(subst sources/,objects/,$(subst .cpp,.o,$(SOURCES)))
 # environment
 LANG = C
 # environment
-VSCODE_PID = 14612
+VSCODE_PID = 2139
 # makefile (from 'Makefile', line 10)
 TIDY_FLAGS = -extra-arg=-std=$(CXXVERSION) -checks=bugprone-*,clang-analyzer-*,cppcoreguidelines-*,performance-*,portability-*,readability-*,-cppcoreguidelines-pro-bounds-pointer-arithmetic,-cppcoreguidelines-owning-memory --warnings-as-errors=*
 # variable set hash-table stats:
@@ -280,14 +280,14 @@ TIDY_FLAGS = -extra-arg=-std=$(CXXVERSION) -checks=bugprone-*,clang-analyzer-*,c
 # No pattern-specific variable values.
 
 # Directories
-
  
 make: *** No rule to make target 'all'.  Stop.
 
-# . (device 2053, inode 1058871): 15 files, no impossibilities.
+
+# . (device 2053, inode 1058871): 17 files, no impossibilities.
 # sources (device 2053, inode 1059003): 5 files, no impossibilities.
 
-# 20 files, no impossibilities in 2 directories.
+# 22 files, no impossibilities in 2 directories.
 
 # Implicit Rules
 
@@ -332,7 +332,7 @@ StudentTest3.cpp:
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-04-10 22:40:14.152158514
+#  Last modified 2022-04-28 15:53:16.559264165
 #  File has been updated.
 #  Successfully updated.
 
@@ -416,12 +416,12 @@ StudentTest1.o:
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 40 / storage = 412 B / avg = 10 B
-# current buf: size = 8162 B / used = 412 B / count = 40 / avg = 10 B
+# strcache buffers: 1 (0) / strings = 42 / storage = 426 B / avg = 10 B
+# current buf: size = 8162 B / used = 426 B / count = 42 / avg = 10 B
 
-# strcache performance: lookups = 59 / hit rate = 32%
+# strcache performance: lookups = 61 / hit rate = 31%
 # hash-table stats:
-# Load=40/8192=0%, Rehash=0, Collisions=2/59=3%
-# Finished Make data base on Wed Apr 13 15:36:31 2022
+# Load=42/8192=1%, Rehash=0, Collisions=2/61=3%
+# Finished Make data base on Thu Apr 28 18:02:32 2022
 
  

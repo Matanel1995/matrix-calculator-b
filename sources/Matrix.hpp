@@ -9,23 +9,24 @@ namespace zich{
             int col;
             vector <double> matrix;
         public:
+            Matrix(){};
             Matrix(vector<double> matrix, int row, int col);
             Matrix(const Matrix&mat);
             ~Matrix(); // defult destractor
 
             //Plus operators
-            Matrix operator + (const Matrix&mat);
+            Matrix operator + (const Matrix&mat)const;
             Matrix& operator += (const Matrix&mat1);
-            Matrix operator + ();
-            Matrix operator ++ ();
+            Matrix operator + ()const;
+            Matrix& operator ++ ();
             Matrix operator ++(int);
 
 
             //Minus operators
-            Matrix operator - (const Matrix&mat);
+            Matrix operator - (const Matrix&mat)const;
             Matrix&  operator -= (const Matrix&mat1);
             Matrix operator - ();
-            Matrix operator -- ();
+            Matrix& operator -- ();
             Matrix operator --(int);
 
             //Multiplaction operators
@@ -65,5 +66,8 @@ namespace zich{
 
             //Sum function to sum all the matrix values
             double CalcSum();
+
+            //Function to check if input is number or not
+            static bool CheckNumber(string const& str);
     };
 }

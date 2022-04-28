@@ -36,7 +36,7 @@ void Matrix::setIndexAt(unsigned int pos , double value){
 
 //****************************************************************//
 //Plus operators
-Matrix Matrix::operator + (const Matrix&mat){
+Matrix Matrix::operator + (const Matrix&mat)const{
     if(this->getCols() !=  mat.getCols() || this->getRows() != mat.getRows()){
         throw std::invalid_argument{"Matrix are not the same size!"};
     }
@@ -55,11 +55,11 @@ Matrix& Matrix::operator += (const Matrix&mat1){
     return *this;
 
 }
-Matrix Matrix::operator + (){
+Matrix Matrix::operator + ()const{
     return *this;
 }
 
-Matrix Matrix::operator ++ (){
+Matrix& Matrix::operator ++ (){
     for(int i=0; i < this->getRows() ; i++){
         for(int j = 0 ; j<this->getCols() ; j++){
             unsigned int index = (unsigned int)((i*this->getCols()) + j);
@@ -82,7 +82,7 @@ Matrix Matrix::operator ++(int){
 
 //****************************************************************//
 //Minus operators
-Matrix Matrix::operator - (const Matrix&mat){
+Matrix Matrix::operator - (const Matrix&mat)const{
     if(this->getCols() !=  mat.getCols() || this->getRows() != mat.getRows()){
         throw std::invalid_argument{"Matrix are not the same size!"};
     }
@@ -109,7 +109,7 @@ Matrix Matrix::operator - (){
     }
     return *this;
 }
-Matrix Matrix::operator -- (){
+Matrix& Matrix::operator -- (){
     for(int i=0; i < this->getRows() ; i++){
         for(int j = 0 ; j<this->getCols() ; j++){
             unsigned int index = (unsigned int)((i*this->getCols()) + j);
@@ -311,47 +311,107 @@ ostream& zich::operator<<(ostream& out , const Matrix& matrix){
     return out;
 }
 
-istream& zich::operator >>(istream& in,Matrix &mat){
+bool Matrix::CheckNumber(string const& str){
+    int counter = 0;
+    char ch=' ';
+    for (size_t i = 0; i < str.length(); ++i) {
+        ch = str.at(i);
+        if(ch=='.'&&i==0){
+            return false;
+        }
+        if(ch<'0'||ch>'9'){
+            if(ch!='.') {
+                return false;
+            }
+        }
+        if(ch=='.'){
+            counter++;
+        }
+        if(counter==2){
+            return false;
+        }
+    }
+    return true;
+}
+
+istream& zich::operator >>(istream& in,Matrix  &mat) {
     vector<double> vec;
-    int row=0;
-    int rowLenght = 1;
-    int counter = 1;
-    char last=' ';
-    char beforeLast=',';
+    int row = 0;
+    int rowLenght = 0;
+    int counter = 0;
     double number = 0;
+    bool b = false;
     bool first = false;
     string tempNum;
     char temp = in.get();
-    while(temp!='\n'){
+    while (temp != '\n') {
+        if(!b&&temp!='['){
+            throw invalid_argument("wrong input for matrix >> operator");
+        }
+        if(temp=='['){
+            temp= in.get();
+            if(temp<'0'||temp>'9'){
+                throw invalid_argument("wrong input for matrix >> operator");
+            }
+        }
         if(temp==' '){
-            number= stod(tempNum);
+            if(!(Matrix::CheckNumber(tempNum))){
+                throw invalid_argument("wrong input for matrix >> operator");
+            }
+            number = stod(tempNum);
             vec.push_back(number);
             tempNum="";
+            temp =in.get();
             counter++;
         }
-        if(temp==','){
+        if(temp==']') {
+            if(!Matrix::CheckNumber(tempNum)){
+                throw invalid_argument("wrong input for matrix >> operator");
+            }
+            number = stod(tempNum);
+            vec.push_back(number);
+            tempNum = "";
             row++;
-            if(first&&rowLenght!=counter){
-                throw invalid_argument("wrong input for matrix");
+            counter++;
+            if (first && rowLenght != counter) {
+                throw invalid_argument("wrong input for matrix >> operator");
             }
-            if(!first) {
+            if (!first) {
                 rowLenght = counter;
-                first= true;
+                first = true;
             }
-            counter=0;
-
-        }
-            if(temp!='['&&temp!=']') {
-                tempNum += temp;
+            counter = 0;
+            temp = in.get();
+            if (temp == '\n') {
+                break;
+            }
+            if (temp != ',') {
+                throw invalid_argument("wrong input for matrix >> operator");
             }
             temp = in.get();
-
+            if (temp != ' ') {
+                throw invalid_argument("wrong input for matrix >> operator");
+            }
+            temp = in.get();
+            if(temp!='['){
+                throw invalid_argument("wrong input for matrix >> operator");
+            }
+            temp = in.get();
         }
-    mat.col=rowLenght;
-    mat.row = row;
-    mat.matrix = vec;
-    return in;
+        b= true;
+        tempNum += temp;
+        temp= in.get();
+
+    }
+    if(row ==0|| rowLenght==0){
+        throw invalid_argument("wrong input for matrix >> operator");
+    }
+        mat.col=rowLenght;
+        mat.row = row;
+        mat.matrix = vec;
+        return in;
 }
+
 //****************************************************************//
 
 //****************************************************************//
